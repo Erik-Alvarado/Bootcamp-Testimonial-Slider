@@ -1,0 +1,28 @@
+footer {
+  height: 10%;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-image: url("/images/pattern-curve.svg");
+  background-position: bottom left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  @include breakpoint-up(small) {
+    height: 20%;
+    z-index: 0;
+  }
+  .attribution {
+    margin: 0 15px;
+    position: absolute;
+    bottom: 15px;
+    right: 0;
+    left: 0;
+    text-align: center;
+    font-size: 0.875rem;
+    color: $darkBlue;
+    a {
+      text-decoration: none;
+      color: $grayBlue;
+    }
+  }
+}
