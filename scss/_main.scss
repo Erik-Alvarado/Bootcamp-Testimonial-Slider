@@ -16,6 +16,7 @@ main {
   justify-content: center;
   background-repeat: no-repeat;
   background-position: center top;
+  position: relative;
   @include breakpoint-up(x-small) {
     background-size: 350px;
   }
@@ -23,10 +24,24 @@ main {
     background-position: right;
     background-size: 450px;
     height: 100%;
+    margin: 0 25px;
   }
   @include breakpoint-up(large) {
     background-size: 550px;
     margin: 0 50px;
+  }
+  @include breakpoint-up(x-large) {
+    background-size: 600px;
+    margin: 0 130px;
+  }
+  @media (min-width: 1550px) {
+    margin: 0 200px;
+  }
+  @media (min-width: 1700px) {
+    margin: 0 250px;
+  }
+  @media (min-width: 1800px) {
+    margin: 0 350px;
   }
   .slide-control {
     background-color: $base;
@@ -35,16 +50,19 @@ main {
     position: absolute;
     border-radius: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    top: 420px;
+    top: 275px;
     display: flex;
     z-index: 5;
     @include breakpoint-up(small) {
-      top: 570px;
+      top: 610px;
       right: 225px;
     }
     @include breakpoint-up(large) {
-      top: 615px;
-      right: 375px;
+      top: 650px;
+      right: 300px;
+    }
+    @include breakpoint-up(x-large) {
+      right: 400px;
     }
     .left,
     .right {
@@ -91,6 +109,10 @@ main {
       width: 880px;
       font-size: 3em;
     }
+    @include breakpoint-up(x-large) {
+      width: 1075px;
+      font-size: 4em;
+    }
     img {
       border-radius: 5px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
@@ -107,6 +129,9 @@ main {
       @include breakpoint-up(large) {
         width: 425px;
       }
+      @include breakpoint-up(x-large) {
+        width: 440px;
+      }
     }
     .text {
       @include breakpoint-up(x-small) {
@@ -120,6 +145,9 @@ main {
       }
       @include breakpoint-up(medium) {
         width: 470px;
+      }
+      @include breakpoint-up(x-large) {
+        width: 760px;
       }
       .quote {
         margin-top: 25px;
@@ -136,6 +164,9 @@ main {
         }
         @include breakpoint-up(medium) {
           width: 470px;
+        }
+        @include breakpoint-up(x-large) {
+          width: 650px;
         }
       }
       .reviewer {
